@@ -26,8 +26,8 @@ const Modal = ({ onClose }) => {
         return <StepOne nextStep={nextStep} />;
       case 2:
         return <StepTwo nextStep={nextStep} />;
-        case 3:
-          return <StepThree nextStep={nextStep} />;
+      case 3:
+        return <StepThree nextStep={nextStep} />;
       default:
         return null;
     }
@@ -125,7 +125,7 @@ const StepOne = ({ nextStep }) => {
 
 
 
- 
+
 
 
 
@@ -288,7 +288,7 @@ const StepOne = ({ nextStep }) => {
         </div>
 
 
-        <div className='col-span-12 flex items-center justify-center md:col-span-6 w-full'>
+        <div className='col-span-12 flex items-center justify-center md:col-span-6 w-full order-last md:order-none pb-4 md:pb-0'>
 
 
 
@@ -348,18 +348,8 @@ const StepOne = ({ nextStep }) => {
 
         </div>
 
-
-
-
-
-
-
-      </div >
-
-
-      <div className='grid grid-cols-12 gap-4 mt-5 items-center'>
-        <div className='col-span-12'>
-          <div className='py-2 px-2 relative mt-2 '>
+        <div className='col-span-12 flex  w-full'>
+          <div className='py-2 px-2 relative  w-full '>
             <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Long Description</label>
 
             <textarea
@@ -370,9 +360,17 @@ const StepOne = ({ nextStep }) => {
             />
 
           </div>
+
         </div>
 
-      </div>
+
+
+
+
+      </div >
+
+
+
 
 
 
@@ -448,7 +446,7 @@ const StepTwo = ({ nextStep }) => {
 
 
 
-       
+
       </div>
 
 
