@@ -349,6 +349,8 @@ const StepOne = ({ nextStep }) => {
         </div>
 
         <div className='col-span-12 flex  w-full'>
+
+          
           <div className='py-2 px-2 relative  w-full '>
             <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Long Description</label>
 
