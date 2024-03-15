@@ -115,12 +115,23 @@ const products = [
 
 
 
-
-
-
 const StepOne = ({ nextStep }) => {
 
+  const [labelText, setLabelText] = useState('Price ');
 
+  const price = [
+    { value: 'fixed', label: 'Fixed' },
+    { value: 'auction', label: 'Auction' },
+  ];
+
+  const handlePriceChange = (selectedOption) => {
+    setSelectedOption(selectedOption);
+    if (selectedOption && selectedOption.value === 'auction') {
+      setLabelText('Starting price');
+    } else {
+      setLabelText('Fixed Price');
+    }
+  };
 
 
 
@@ -235,13 +246,24 @@ const StepOne = ({ nextStep }) => {
 
           </div>
 
+          <div className='relative py-2 px-2'>
+            <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Price</label>
+            <Select
+              onChange={handlePriceChange}
+              defaultValue={selectedOption}
+              options={price}
+              styles={customStyles}
+              placeholder='Select price'
+              className=''
+            />
+          </div>
 
           <div className='py-2 px-2 relative mt-2 '>
-            <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Price In Credits</label>
+            <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">{labelText}</label>
 
             <input
               type="text"
-              className="w-full bg-transparent placeholder-white hover:border-gray-300 rounded-md border-2 border-[#555] text-white    py-2 px-4  focus:outline-none "
+              className="w-full bg-transparent placeholder-white hover:border-gray-300 rounded-md border-2 border-[#555] text-white py-2 px-4 focus:outline-none"
               required
               placeholder='00.0'
             />
@@ -249,16 +271,6 @@ const StepOne = ({ nextStep }) => {
 
 
 
-          <div className='py-2 px-2 relative mt-2 '>
-            <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Short Description</label>
-
-            <input
-              type="text"
-              className="w-full bg-transparent placeholder-white hover:border-gray-300 rounded-md border-2 border-[#555] text-white    py-2 px-4  focus:outline-none "
-              required
-              placeholder='desc...'
-            />
-          </div>
 
 
 
@@ -350,7 +362,7 @@ const StepOne = ({ nextStep }) => {
 
         <div className='col-span-12 flex  w-full'>
 
-          
+
           <div className='py-2 px-2 relative  w-full '>
             <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Long Description</label>
 
@@ -365,11 +377,40 @@ const StepOne = ({ nextStep }) => {
 
         </div>
 
+        <div className='col-span-12 flex px-2  w-full -mt-3'>
+
+
+          <label className="inline-flex items-center cursor-pointer">
+            <input type="checkbox" defaultValue="" className="sr-only peer" />
+            <div className="relative w-9 h-5 bg-[#6b6b6b] peer-focus:outline-none peer-focus:ring-none peer-focus:ring-none  rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all  peer-checked:bg-[#22c55e]" />
+            <span className="ms-2 text-sm  text-white">
+              Adult Content
+            </span>
+          </label>
+
+        </div>
+
+
+
+        <div className='col-span-12 flex px-2  w-full -mt-1'>
+
+
+          <label className="inline-flex items-center cursor-pointer ">
+            <input type="checkbox" defaultValue="" className="sr-only peer" />
+            <div className="relative w-9 h-5 bg-[#6b6b6b] peer-focus:outline-none peer-focus:ring-none peer-focus:ring-none  rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all  peer-checked:bg-[#22c55e]" />
+            <span className="ms-2 text-sm  text-white">
+            AI
+            </span>
+          </label>
+
+        </div>
 
 
 
 
       </div >
+
+      
 
 
 
