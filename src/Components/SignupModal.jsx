@@ -49,7 +49,7 @@ const Modal = ({ onClose }) => {
 
   return (
     <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center bg-transparent bg-opacity-80 px-4">
-      <div className="bg-[#2d2d2d] border-gray-600 w-full max-w-[900px] h-[800px] md:h-[700px] p-4 rounded-xl shadow-lg flex flex-col overflow-x-auto">
+      <div className="bg-[#2d2d2d] border-gray-600 w-full max-w-[900px] h-[800px] md:h-[740px] p-4 rounded-xl shadow-lg flex flex-col overflow-x-auto">
         <div className="flex justify-end">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +274,7 @@ const StepOne = ({ nextStep }) => {
 
 
 
-          <div className='relative py-2 px-2'>
+          <div className='relative py-2 px-2 mt-2'>
             <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Product Type:</label>
             <Select
               onChange={setSelectedOption}
