@@ -721,7 +721,7 @@ const StepThree = ({ nextStep }) => {
 
         <div className='col-span-12 md:col-span-6 w-full'>
           <div className='py-2 px-2 relative mt-2 '>
-            <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Limitation Quantity (0 - 10,000)</label>
+            <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Limitation Quantity </label>
 
             <input
               type="number"
