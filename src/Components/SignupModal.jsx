@@ -28,8 +28,8 @@ const Modal = ({ onClose }) => {
         return <StepTwo nextStep={nextStep} />;
       case 3:
         return <StepThree nextStep={nextStep} />;
-        case 4:
-          return <StepFour nextStep={nextStep} />;
+      case 4:
+        return <StepFour nextStep={nextStep} />;
       default:
         return null;
     }
@@ -43,8 +43,8 @@ const Modal = ({ onClose }) => {
         return "Your New Product";
       case 3:
         return "Your New Product";
-        case 4:
-          return "Your New Product";
+      case 4:
+        return "Your New Product";
 
       default:
         return "Unknown Step";
@@ -252,7 +252,7 @@ const StepOne = ({ nextStep }) => {
 
 
 
-  
+
 
 
 
@@ -284,7 +284,7 @@ const StepOne = ({ nextStep }) => {
         </div>
 
 
-        <div className='col-span-12 flex items-center justify-center md:col-span-6 w-full order-last md:order-none pb-4 md:pb-0'>
+        <div className='col-span-12 flex items-center justify-center md:col-span-6 w-full order-last md:order-none pr-2 pb-4 md:pb-0'>
 
 
 
@@ -343,7 +343,7 @@ const StepOne = ({ nextStep }) => {
 
 
         </div>
-     
+
 
         <div className='col-span-12 flex  w-full'>
 
@@ -384,7 +384,7 @@ const StepOne = ({ nextStep }) => {
             <input type="checkbox" defaultValue="" className="sr-only peer" />
             <div className="relative w-9 h-5 bg-[#6b6b6b] peer-focus:outline-none peer-focus:ring-none peer-focus:ring-none  rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all  peer-checked:bg-[#22c55e]" />
             <span className="ms-2 text-sm  text-white">
-            AI
+              AI
             </span>
           </label>
 
@@ -395,7 +395,7 @@ const StepOne = ({ nextStep }) => {
 
       </div >
 
-      
+
 
 
 
@@ -635,9 +635,9 @@ const StepThree = ({ nextStep }) => {
         </div>
 
 
-<div >
+        <div >
 
-</div>
+        </div>
         <div className='col-span-12 md:col-span-6 w-full'>
           <div className='py-2 px-2 relative mt-2'>
             <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1"> From</label>
@@ -715,23 +715,38 @@ const StepThree = ({ nextStep }) => {
             </style>
           </div>
 
+
+
         </div>
 
+        <div className='col-span-12 md:col-span-6 w-full'>
+          <div className='py-2 px-2 relative mt-2 '>
+            <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1">Limitation Quantity 0 - 10000</label>
+
+            <input
+              type="number"
+              className="w-full bg-transparent placeholder-white hover:border-gray-300 rounded-md border-2 border-[#555] text-white py-2 px-4 focus:outline-none"
+              required
+              placeholder='Unlimited'
+            />
+          </div>
         </div>
 
-      
-
-       
-
-
-
-     
+      </div>
 
 
 
 
 
-      
+
+
+
+
+
+
+
+
+
 
 
 
