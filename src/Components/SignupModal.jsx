@@ -53,7 +53,7 @@ const Modal = ({ onClose }) => {
 
   return (
     <div className="absolute top-12 md:top-0 bottom-0  left-0 right-0 flex items-center justify-center bg-transparent bg-opacity-80 px-4">
-      <div className="bg-[#2d2d2d] border-gray-600 w-full max-w-[900px] h-[650px] md:h-[700px] p-4 rounded-xl shadow-lg flex flex-col overflow-x-auto">
+      <div className="bg-[#2d2d2d] border-gray-600 w-full max-w-[900px] h-[680px] md:h-[700px] p-4 rounded-xl shadow-lg flex flex-col overflow-x-auto">
         <div className="flex justify-end">
           <svg
             xmlns="http://www.w3.org/2000/svg"
