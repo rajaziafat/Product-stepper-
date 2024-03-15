@@ -359,6 +359,85 @@ const StepOne = ({ nextStep }) => {
 
 
         </div>
+        <div className='col-span-12 md:col-span-6 w-full -mt-4'>
+          <div className='py-2 px-2 relative mt-2'>
+            <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1"> From</label>
+
+            <input
+              type="date"
+
+              className="w-full bg-transparent placeholder-white hover:border-gray-300 rounded-md border-2 border-[#555] text-white py-2 px-4 focus:outline-none"
+              style={{ background: 'transparent', color: 'white', width: '100%', height: '45px', WebkitAppearance: 'none' }} // Adjust width and height, and remove default appearance for iOS
+              placeholder="Select Date" // Placeholder text for iOS
+            />
+
+            <style>
+              {`
+      /* Set placeholder color */
+      ::-webkit-input-placeholder {
+        color: white;
+      }
+
+      /* Style the date picker */
+      input[type="date"] {
+        -webkit-appearance: none; /* Remove default arrow button in Safari */
+        appearance: none;
+        padding: 10px; /* Adjust padding for better appearance */
+        background-color: #3c3c3c; /* Set background color */
+        border: 2px solid #555; /* Set border */
+        border-radius: 5px; /* Set border radius */
+        color: white; /* Set text color */
+      }
+
+      /* Style the date picker icon */
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1); /* Invert the color of the icon to white */
+      }
+    `}
+            </style>
+          </div>
+
+        </div>
+        <div className='col-span-12 md:col-span-6 w-full -mt-4'>
+          <div className='py-2 px-2 relative mt-2'>
+            <label className="block text-sm text-white absolute top-1 z-10 -mt-2 ml-2 bg-[#2d2d2d] px-1"> To</label>
+
+            <input
+              type="date"
+
+              className="w-full bg-transparent placeholder-white hover:border-gray-300 rounded-md border-2 border-[#555] text-white py-2 px-4 focus:outline-none"
+              style={{ background: 'transparent', color: 'white', width: '100%', height: '45px', WebkitAppearance: 'none' }} // Adjust width and height, and remove default appearance for iOS
+              placeholder="Select Date" // Placeholder text for iOS
+            />
+
+            <style>
+              {`
+      /* Set placeholder color */
+      ::-webkit-input-placeholder {
+        color: white;
+      }
+
+      /* Style the date picker */
+      input[type="date"] {
+        -webkit-appearance: none; /* Remove default arrow button in Safari */
+        appearance: none;
+        padding: 10px; /* Adjust padding for better appearance */
+        background-color: #3c3c3c; /* Set background color */
+        border: 2px solid #555; /* Set border */
+        border-radius: 5px; /* Set border radius */
+        color: white; /* Set text color */
+      }
+
+      /* Style the date picker icon */
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1); /* Invert the color of the icon to white */
+      }
+    `}
+            </style>
+          </div>
+
+        </div>
+
 
         <div className='col-span-12 flex  w-full'>
 
@@ -399,7 +478,7 @@ const StepOne = ({ nextStep }) => {
             <input type="checkbox" defaultValue="" className="sr-only peer" />
             <div className="relative w-9 h-5 bg-[#6b6b6b] peer-focus:outline-none peer-focus:ring-none peer-focus:ring-none  rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all  peer-checked:bg-[#22c55e]" />
             <span className="ms-2 text-sm  text-white">
-            AI
+              AI
             </span>
           </label>
 
@@ -410,7 +489,7 @@ const StepOne = ({ nextStep }) => {
 
       </div >
 
-      
+
 
 
 
