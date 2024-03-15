@@ -52,7 +52,7 @@ const Modal = ({ onClose }) => {
   };
 
   return (
-    <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center bg-transparent bg-opacity-80 px-4">
+    <div className="absolute top-44 md:top-0 bottom-0 left-0 right-0 flex items-center justify-center bg-transparent bg-opacity-80 px-4">
       <div className="bg-[#2d2d2d] border-gray-600 w-full max-w-[900px] h-[800px] md:h-[700px] p-4 rounded-xl shadow-lg flex flex-col overflow-x-auto">
         <div className="flex justify-end">
           <svg
@@ -315,7 +315,7 @@ const StepOne = ({ nextStep }) => {
                 </div>
               </div>
             ) : (
-              <div className='h-[200px]'>
+              <div className='md:h-[200px]'>
                 <div className="flex items-center justify-center w-full">
                   <label htmlFor="image_upload" className=" bg-[#3e3e3e] cursor-pointer bg-gray border-2 border-[#555] rounded-2xl w-full pb-4">
                     <div className='flex justify-center'>
@@ -573,48 +573,7 @@ const StepThree = ({ nextStep }) => {
   };
 
 
-  const [uploadedImage, setUploadedImage] = useState(null);
-  const [uploadProgress, setUploadProgress] = useState(0);
-  const fileInputRef = useRef(null);
 
-  const handleUploadButtonClick = () => {
-    // Trigger click event on file input
-    fileInputRef.current.click();
-  };
-
-  const handleFileInputChange = (event) => {
-    const file = event.target.files[0];
-    // Simulate upload process (you would replace this with your actual upload logic)
-    uploadFile(file);
-  };
-
-  const uploadFile = (file) => {
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      setUploadedImage(event.target.result);
-      // Simulate upload progress
-      simulateUploadProgress(file);
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const simulateUploadProgress = (file) => {
-    const totalSize = file.size;
-    let loaded = 0;
-    const interval = setInterval(() => {
-      loaded += 10000; // Simulate progress by adding 10KB each interval
-      const progress = Math.min((loaded / totalSize) * 100, 100);
-      setUploadProgress(progress);
-      if (progress === 100) {
-        clearInterval(interval);
-      }
-    }, 100); // Simulate progress every 100 milliseconds
-  };
-
-  const handleDeleteImage = () => {
-    setUploadedImage(null);
-    setUploadProgress(0);
-  };
 
   return (
     <>
